@@ -7,8 +7,9 @@ async function bootstrap() {
 
   const config = new DocumentBuilder()
     .setTitle('LearnLink Endpoints')
-    .setDescription('This is the routes that make up the backend of LearnLink application')
+    .setDescription('These are the routes that make up the backend of LearnLink application')
     .setVersion('1.0')
+    .addBearerAuth()
     .build();
   const document = SwaggerModule.createDocument(app, config);
   SwaggerModule.setup('api', app, document);
